@@ -30,7 +30,7 @@ describe Book do
     end
 
     describe "#category" do
-        it "returns the correct icategory" do
+        it "returns the correct category" do
             @book.category.should eql :category
         end
 

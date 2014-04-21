@@ -10,5 +10,14 @@ Crear:
 	|- library_spec.rb
 	|- spec_helper.rb
 
-Los tests fallarán si no hemos creado los modelos, y para probar los tests --> rspec  spec
+Para probar los tests de la carpeta spec:
+rspec  spec
 
+Para probar los tests library_spec de la carpeta spec:
+rspec  spec/library_spec.rb
+
+Si queremos ver lo que lanzamos:
+rspec spec --format nested
+
+Y si lo juntamos todo:
+rspec  spec/library_spec.rb --format nested
