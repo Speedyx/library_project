@@ -4,7 +4,7 @@ describe Book do
 
     before :each do
     #before :all do
-        @book = Book.new("Title", "Author", "Category")
+        @book = Book.new "Title", "Author", :category
     end
 
     describe "#new" do
@@ -12,8 +12,26 @@ describe Book do
             @book.should be_an_instance_of Book
         end
 
-        it "takes three parameters and returns a book object" do
-            Book.new("Title", "Author", "Category")
+        it "throws an ArgumentError when given fewer than 3 parameters" do
+            lambda { Book.new "Title", "Author" }.should raise_exception ArgumentError
+        end
+    end
+
+    describe "#title" do
+        it "returns the correct title" do
+            @book.title.should eql "Title"
+        end
+    end
+
+    describe "#author" do
+        it "returns the correct author" do
+            @book.author.should eql "Author"
+        end
+    end
+
+    describe "#category" do
+        it "returns the correct icategory" do
+            @book.category.should eql :category
         end
 
     end
