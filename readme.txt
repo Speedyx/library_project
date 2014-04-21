@@ -10,6 +10,15 @@ Crear:
 	|- library_spec.rb
 	|- spec_helper.rb
 
+Como ayuda se puede generar con:
+rails generate rspec:install
+
+Como ayuda se puede usar en la carpeta principal:
+rspec --init
+
+Y puede que necesite un:
+rake db:migrate RAILS_ENV = test
+
 Para probar los tests de la carpeta spec:
 rspec  spec
 
