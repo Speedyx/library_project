@@ -10,6 +10,11 @@ Crear:
 	|- library_spec.rb
 	|- spec_helper.rb
 
+En el Gemfile tenemos que poner:
+group :development, :test do
+  gem 'rspec-rails'
+end
+
 Como ayuda se puede generar con:
 rails generate rspec:install
 
